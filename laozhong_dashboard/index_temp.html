@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>老钟的dashboard</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+  <!-- pyecharts -->
+  <script type="text/javascript" src="echarts.min.js"></script>
+  <script type="text/javascript" src="chalk.js"></script>
+  <!-- Dashboard -->
+  <link rel="stylesheet" type="text/css" href="keen-dashboards.css" />
+</head>
+
+<body class="keen-dashboard">
+
+  <div class="container">
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="./">老钟的dashboard</a>
+      </div>
+      <div class="navbar-collapse">
+        <ul class="navbar-nav nav main-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="https://space.bilibili.com/164106011">Bilibili</a></li>
+          <li><a href="#">YouTube</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container grid grid-split-centered">
+    <div class="grid-split">
+      <div class="grid-split-column">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            哔哩哔哩·新增播放
+          </div>
+          <div class="chart-stage">
+          {line_left_bilibili}
+          </div>
+          <div class="chart-notes">
+            <!-- Notes about this chart -->
+          </div>
+        </div>
+      </div>
+      <div class="grid-split-column grid-split-column--centered">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            总曝光量
+          </div>
+          <div class="chart-stage">
+            {all}
+          </div>
+          <div class="chart-notes">
+            <!-- Notes about this chart -->
+          </div>
+        </div>
+      </div>
+      <div class="grid-split-column">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            哔哩哔哩·新增关注数
+          </div>
+          <div class="chart-stage">
+            {line_right_bilibili}
+          </div>
+          <div class="chart-notes">
+            <!-- Notes about this chart -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container grid" style="margin-top: 10px">
+      <div class="chart-wrapper">
+        <div class="chart-title">
+          堆叠区域图
+        </div>
+        <div class="chart-stage">
+          {bottom_all}
+        </div>
+        <div class="chart-notes">
+          <!-- Notes about this chart -->
+        </div>
+      </div>
+    </div> 
+
+  <div class="container">
+    <p class="small text-muted">Built with &#9829; by <a href="https://space.bilibili.com/164106011">老钟</a></p>
+  </div>
+
+</body>
+
+</html>
